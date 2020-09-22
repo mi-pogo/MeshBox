@@ -1,7 +1,5 @@
-# MeshBox
-zzzzzzzzzzzzzzzzzzzzzzzz
+# MeshButtons
 
-This navigation functionality was achieved through the implementation of a dedicated software service called MeshButtons. More details about it can be found here.
-
-In order to be able to use the rotary encoders and push buttons with Kodi under any Linux platform, I have developed a C++ program (service) named "MeshButtons" which reads the GPIO and sends commands to Kodi’s Event Server. More details about it can be found here.
-Retro style ghetto blaster with modern capabilities.
+MeshButtons is a dedicated software service which provide navigation functionality to the MeshBox via its rotary encoders and push buttons.
+It achieves this by reading the GPIOs status and sending commands to Kodi’s Event Server.
+It can be compiled and ran under any Linux platform.
