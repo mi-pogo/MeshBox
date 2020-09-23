@@ -16,3 +16,7 @@ To do this on a machine running Linux Debian or any of its derivatives use the f
 In order to compile MeshButtons use the following command:
 
 <b>g++ MeshButtons.cpp</b>
+
+Before compile, be sure that ARM Cross compiler toolchain is installed.
+
+To install MeshButtons executable / binary on the target Raspberry Pi please refer to software section.
