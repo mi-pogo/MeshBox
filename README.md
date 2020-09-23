@@ -13,10 +13,8 @@ To do this on a machine running Linux Debian or any of its derivatives use the f
 
 <b>sudo apt-get install kodi-eventclients-dev</b>
 
-In order to compile MeshButtons use the following command:
+In order to compile MeshButtons, first be sure that ARM Cross compiler toolchain is installed, then use the following command:
 
-<b>g++ MeshButtons.cpp</b>
-
-Before compile, be sure that ARM Cross compiler toolchain is installed.
+<b>arm-linux-gnueabihf-g++ -Wall "Mesh_Buttons.cpp" -o "Mesh_Buttons" -I "mesh_functions.h" "mesh_functions.cpp" -pthread</b>
 
 To install MeshButtons executable / binary on the target Raspberry Pi please refer to software section.
