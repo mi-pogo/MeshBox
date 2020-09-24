@@ -8,6 +8,8 @@ It can work with two rotary encoders (both with click) and two push buttons in i
 
 For reading the GPIO pins associated with encoders and buttons MeshButtons uses memory mapped registers, via dev/mem and mmap, for faster acces while for sending commands to Kodi, MeshButtons uses Kodi Event Server.
 
+It uses separate thread instances for polling each encoder and button and main thread is responsible for sending coommands (actions) to Kodi Event Server. Communication between thread instances and main thread is done via an internal defined queue.
+
 The latter one requires Kodi Event Client library to be installed on the system where MeshButtons is compiled.
 To do this on a machine running Linux Debian or any of its derivatives use the following command:
 
