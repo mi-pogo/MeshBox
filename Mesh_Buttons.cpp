@@ -30,12 +30,10 @@ int main() {
 
     int exState, thread_param, tempval;
 
+    // GPIO pins are set to input pull-up mode via config.txt file. Please refer to the software section on GitHub:  https://github.com/mi-pogo/MeshBox/wiki/Software
+
     // Set up gpio pointer for direct register access
     setup_io();
-    // Switch GPIOs to input mode
-    INP_GPIO(backButton);
-    INP_GPIO(EncNavOutA);
-    INP_GPIO(EncNavOutB);
 
     // Initialize queue
     queEvent = CreateQueCon();
@@ -157,7 +155,6 @@ void *encoder_handler (void *encparam)
          else
              bitval = th_param*10;  // if rotated to right
 
-         // cout << th_param << " - " << bitval << endl;
          pthread_mutex_lock (&mutex_rot); // Enter critical section
          QuePush(queEvent, bitval); // send event to the queue
          pthread_mutex_unlock (&mutex_rot); // Exit critical section
