@@ -19,4 +19,4 @@ In order to compile MeshButtons, first ARM Cross compiler toolchain must be inst
 
 <b>arm-linux-gnueabihf-g++ -Wall "Mesh_Buttons.cpp" -o "Mesh_Buttons" -I "mesh_functions.h" "mesh_functions.cpp" -pthread</b>
 
-To install MeshButtons executable / binary on the target Raspberry Pi please refer to the software section.
+To install MeshButtons executable / binary on the target Raspberry Pi please refer to the <a href="https://github.com/mi-pogo/MeshBox/wiki/2.-Software/_edit">software section</a>.
